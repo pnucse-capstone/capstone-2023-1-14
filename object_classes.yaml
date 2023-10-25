@@ -1,0 +1,14 @@
+path: .
+train: dataset/images/train
+val: dataset/images/valid
+test: # optional
+
+names:
+  0: person
+  1: child
+  2: merchant   # salesperson
+  3: stroller
+  4: blind      # visually impaired
+  5: wheelchair
+  6: bag
+  7: wallet
