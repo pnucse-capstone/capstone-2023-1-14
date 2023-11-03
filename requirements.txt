@@ -1,0 +1,9 @@
+flask
+opencv-python
+werkzeug
+ultralytics==8.0.162
+supervision==0.13.0
+numpy
+matplotlib
+Pillow
+flask-socketio
