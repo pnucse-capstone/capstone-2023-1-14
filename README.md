@@ -1,7 +1,7 @@
 # 지하철 내 주의가 필요한 인물 및 분실물 탐지
 
 ## 1. 프로젝트 소개
-- 프로젝트 명 : 지하철 내 주의가 필요한 인물 및 분실물 탐지
+- 프로젝트 명 : 라즈베리 파이를 이용한 스마트폰 부품 판별 시스템
 - 프로젝트 배경 : 현대 사회에서 공공장소에서의 범죄와 안전 문제 등이 지속적으로 발생하고 있으며, 대부분의 CCTV는 단순히 촬영 및 녹화의 기능만 하고 있다.
 또한 사람들이 많이 몰리는 장소에서는 눈에 띄지 않는 분실물이나 주의가 필요한 인물을 놓치기 쉬워 신속한 대응이 어렵다.
 이러한 문제들을 해결하기 위해 인공지능과 빅데이터를 활용한 CCTV 분석이 필요하다. 
@@ -17,13 +17,15 @@
 
 
 ## 3. 구성도
-![img](https://github.com/pnucse-capstone/capstone-2023-1-14/assets/101184475/3e87161b-1607-4687-8044-f8166a9a8cdb)
-![img](https://github.com/pnucse-capstone/capstone-2023-1-14/assets/101184475/82295c1c-afdc-4197-8834-8f221bc5489e)
+### 전체적인 구성도
+![Untitled](https://github.com/pnucse-capstone/capstone-2023-1-14/assets/101184475/b880ccd4-9035-4e5e-a0df-49fefd8b0efd)
+![알고리즘](https://github.com/pnucse-capstone/capstone-2023-1-14/assets/101184475/d92fd0fd-7553-4630-a89c-8d93d66cba49)
 
 
 
-## 4. 소개 및 시연 영상[
-(https://www.youtube.com/watch?v=l4aT9FUigxY)
+
+## 4. 소개 및 시연 영상
+11/1일 업로드 예정
 
 ## 5. 사용법
 ### Python Requirements
@@ -43,7 +45,7 @@ __개발 환경 버전__
 |numpy|v1.24.3|
 |matplotlib|v3.7.1|
 |Pillow|v9.4.0|
-|flask-socketio|---|
+|waitress|---|
 
 ### waitress 서버 실행
 
