@@ -1,6 +1,5 @@
 #detect_and_track.py
 from ultralytics import YOLO
-from typing import List, Dict
 import supervision as sv    # 0.13.0 version
 import cv2
 import os
@@ -39,28 +38,28 @@ def detections_to_txt(file_name: str, detections: sv.Detections, CLASS_NAMES_DIC
             print(line)
             file.write(line + '\n')
   
-def detections_list(detections:sv.Detections, CLASS_NAMES_DICT) -> List[Dict]:
+# def detections_list(detections:sv.Detections, CLASS_NAMES_DICT) -> List[Dict]:
 
-    detect_list = []
+#     detect_list = []
     
-    for i in range(len(detections)):
-        # create a dictionary variable that will contain the info of one detected object
-        detect_dict = {}
+#     for i in range(len(detections)):
+#         # create a dictionary variable that will contain the info of one detected object
+#         detect_dict = {}
         
-        confidence = detections.confidence[i] if detections.confidence is not None else None
-        class_id = detections.class_id[i] if detections.class_id is not None else None
-        tracker_id = detections.tracker_id[i] if detections.tracker_id is not None else None
+#         confidence = detections.confidence[i] if detections.confidence is not None else None
+#         class_id = detections.class_id[i] if detections.class_id is not None else None
+#         tracker_id = detections.tracker_id[i] if detections.tracker_id is not None else None
 
-        if tracker_id is not None:       
-            detect_dict['Track ID: '] = tracker_id
-        if class_id is not None:       
-            detect_dict['Class: '] = CLASS_NAMES_DICT[class_id]
-        if confidence is not None:
-            detect_dict['Confidence: '] = confidence
+#         if tracker_id is not None:       
+#             detect_dict['Track ID: '] = tracker_id
+#         if class_id is not None:       
+#             detect_dict['Class: '] = CLASS_NAMES_DICT[class_id]
+#         if confidence is not None:
+#             detect_dict['Confidence: '] = confidence
            
-        detect_list.append(detect_dict)
+#         detect_list.append(detect_dict)
     
-    return detect_list
+#     return detect_list
 
 def process_video_frame(video_path, output_video_path, output_text_file):
     model=YOLO(MODEL)
@@ -123,12 +122,11 @@ def process_video_frame(video_path, output_video_path, output_text_file):
             ]
             # annotate and write frame
             frame = box_annotator.annotate(scene=frame, detections=filtered_detections, labels=labels)
-            detect_list = detections_list(filtered_detections, CLASS_NAMES_DICT)
   
            # 저장 및 출력
             out.write(frame)
             detections_to_txt(output_text_file, filtered_detections, CLASS_NAMES_DICT)
-            yield frame , detect_list
+            yield frame
 
     finally:
         # Release the video capture object and close any OpenCV windows
