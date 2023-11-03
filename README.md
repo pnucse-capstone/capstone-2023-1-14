@@ -43,7 +43,7 @@ __개발 환경 버전__
 |numpy|v1.24.3|
 |matplotlib|v3.7.1|
 |Pillow|v9.4.0|
-|waitress|---|
+|flask-socketio|---|
 
 ### waitress 서버 실행
 
