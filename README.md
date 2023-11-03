@@ -24,8 +24,8 @@
 
 
 
-## 4. 소개 및 시연 영상
-11/1일 업로드 예정
+## 4. 소개 및 시연 영상[
+(https://www.youtube.com/watch?v=l4aT9FUigxY)
 
 ## 5. 사용법
 ### Python Requirements
